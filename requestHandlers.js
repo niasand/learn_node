@@ -1,5 +1,6 @@
 var exec = require("child_process").exec;
 var querystring = require("querystring");
+var fs = require("fs");
 
 function start(response) {
     console.log("Request handler 'start' was called");
@@ -41,6 +42,25 @@ function upload(response,postData) {
 
 }
 
+function show(response,postData) {
+    console.log("Request handler 'show' was called");
+    fs.readFile("/tmp/bb8-star-wars.jpg","binary",function (error, file) {
+    if(error){
+        response.writeHead(500,{"Content-Type":"text/plain"});
+        response.write(error + "\n");
+        response.end();
+    }
+    else{
+        response.writeHead(200,{"Content-Type":"image/png"});
+        response.write(file,"binary");
+        response.end();
+
+    }
+    });
+    
+}
+
+
 function favicon() {
     console.log("request handeler 'favicon.ico' was called");
 
@@ -51,3 +71,4 @@ exports.start = start;
 exports.upload = upload;
 exports.favicon = favicon;
 exports.start_v1 = start_v1;
+exports.show = show;
