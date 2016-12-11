@@ -1,6 +1,7 @@
 var exec = require("child_process").exec;
 var querystring = require("querystring");
 var fs = require("fs");
+var formidable = require("formidable");
 
 function start(response) {
     console.log("Request handler 'start' was called");
@@ -13,8 +14,8 @@ function start(response) {
 
 }
 
-function start_v1(response,postData){
-    console.log("Requese Handler 'end' was called");
+function start_v1(response){
+    console.log("Requese Handler 'start_v1' was called");
 
     var body = '<html>'+
         '<head>'+
@@ -22,9 +23,10 @@ function start_v1(response,postData){
         'charset=UTF-8" />'+
         '</head>'+
         '<body>'+
-        '<form action="/upload" method="post">'+
-        '<textarea name="text" rows="20" cols="60"></textarea>'+
-        '<input type="submit" value="Submit text" />'+
+        '<form action="/upload" enctype="multipart/form-data"  method="post">'+
+        '<input type="file" name="upload" multiple="multiple">'+
+
+        '<input type="submit" value="upload file" />'+
         '</form>'+
         '</body>'+
         '</html>';
@@ -33,18 +35,26 @@ function start_v1(response,postData){
     response.end();
 }
 
-function upload(response,postData) {
+function upload(response,request) {
     console.log("request handeler 'upload' was called");
 
-    response.writeHead(200,{"Content-Type":"text/plain"});
-    response.write("Hello Upload,you have sent this message: "+querystring.parse(postData).text);
-    response.end();
+    var form = new formidable.IncomingForm();
+    console.log("about to parse! ");
 
+    form.parse(request,function (error,fields,files) {
+        console.log("parse done");
+        fs.renameSync(files.upload.path,"/tmp/test.jpg");
+        response.writeHead(200,{"Content-Type": "text/html"});
+        response.write("received image:</br>");
+        response.write("<img src='/show' />");
+        response.end();
+
+    });
 }
 
-function show(response,postData) {
+function show(response) {
     console.log("Request handler 'show' was called");
-    fs.readFile("/tmp/bb8-star-wars.jpg","binary",function (error, file) {
+    fs.readFile("/tmp/test.jpg","binary",function (error, file) {
     if(error){
         response.writeHead(500,{"Content-Type":"text/plain"});
         response.write(error + "\n");
@@ -65,7 +75,6 @@ function favicon() {
     console.log("request handeler 'favicon.ico' was called");
 
 }
-
 
 exports.start = start;
 exports.upload = upload;
