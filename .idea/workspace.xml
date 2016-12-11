@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="eb9311f5-e1df-471f-8014-bc7398ee750e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.js" afterPath="$PROJECT_DIR$/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requestHandlers.js" afterPath="$PROJECT_DIR$/requestHandlers.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,8 +26,8 @@
       <file leaf-file-name="server2.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server2.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="11" lean-forward="false" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+            <state relative-caret-position="225">
+              <caret line="15" column="10" lean-forward="false" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -39,7 +37,7 @@
         <entry file="file://$PROJECT_DIR$/router.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="48" lean-forward="false" selection-start-line="0" selection-start-column="48" selection-end-line="0" selection-end-column="48" />
+              <caret line="0" column="47" lean-forward="false" selection-start-line="0" selection-start-column="47" selection-end-line="0" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -48,8 +46,8 @@
       <file leaf-file-name="requestHandlers.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/requestHandlers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1005">
-              <caret line="73" column="20" lean-forward="false" selection-start-line="73" selection-start-column="20" selection-end-line="73" selection-end-column="20" />
+            <state relative-caret-position="102">
+              <caret line="35" column="1" lean-forward="true" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -79,10 +77,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/router.js" />
-        <option value="$PROJECT_DIR$/server2.js" />
-        <option value="$PROJECT_DIR$/requestHandlers.js" />
         <option value="$PROJECT_DIR$/index.js" />
+        <option value="$PROJECT_DIR$/server2.js" />
+        <option value="$PROJECT_DIR$/router.js" />
+        <option value="$PROJECT_DIR$/requestHandlers.js" />
       </list>
     </option>
   </component>
@@ -91,6 +89,9 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="55" />
@@ -250,11 +251,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481430685561</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="如何上传图片">
+      <created>1481434602947</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1481434602947</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8340000" />
+    <option name="totallyTimeSpent" value="11177000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="55" y="43" width="1375" height="837" extended-state="0" />
@@ -288,7 +296,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="让router去处理response" />
     <MESSAGE value="处理post的全部内容" />
-    <option name="LAST_COMMIT_MESSAGE" value="处理post的全部内容" />
+    <MESSAGE value="如何上传图片" />
+    <option name="LAST_COMMIT_MESSAGE" value="如何上传图片" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -391,18 +400,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/router.js">
+    <entry file="file://$PROJECT_DIR$/server2.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="48" lean-forward="false" selection-start-line="0" selection-start-column="48" selection-end-line="0" selection-end-column="48" />
+        <state relative-caret-position="225">
+          <caret line="15" column="10" lean-forward="false" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server2.js">
+    <entry file="file://$PROJECT_DIR$/router.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="11" lean-forward="false" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+        <state relative-caret-position="0">
+          <caret line="0" column="47" lean-forward="false" selection-start-line="0" selection-start-column="47" selection-end-line="0" selection-end-column="47" />
           <folding />
         </state>
       </provider>
@@ -417,8 +426,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/requestHandlers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1005">
-          <caret line="73" column="20" lean-forward="false" selection-start-line="73" selection-start-column="20" selection-end-line="73" selection-end-column="20" />
+        <state relative-caret-position="102">
+          <caret line="35" column="1" lean-forward="true" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
           <folding />
         </state>
       </provider>
