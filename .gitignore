@@ -1,8 +1,9 @@
 #Los
-.idea/
+.idea
 logs
 *.log
 npm-debug.log*
+*.un~
 
 # Runtime data
 pids
