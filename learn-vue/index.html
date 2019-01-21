@@ -8,7 +8,29 @@
 <div id="app">
 	{{ message }}
 	</div>
-	<script src="index.js"></script>
+
+<div id="app-2"><span v-bind:title="message">哈哈哈哈哈 悬停看动态绑定信息</span> </div>
+
+
+<div id="app-3">
+<p v-if = "seen">Can you see me </p>
+</div>
+
+<div id="app-4">
+<ol>
+<li v-for="todo in todos">
+	{{todo.text}}
+</li>
+</ol>
+</div>
+
+<div id="app-5">
+	<p>{{ message }}</p>
+	<button v-on:click= "reverseMessage">逆转消息</button>
+</div>
+<script src="index.js"></script>
+
+
 
 </body>
 
