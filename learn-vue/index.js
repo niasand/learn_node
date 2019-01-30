@@ -6,9 +6,8 @@ var app = new Vue({
 });
 app.message = 'I hanve changed my data'
 
-
 var app2= new Vue({
-	el:"#app-2",
+	el:"#app-2",下
 	data :{
 		message: "page load "  + new Date().toLocaleDateString()
 	}
@@ -46,4 +45,36 @@ var app5 = new Vue({
 
 		}
 	}
+});
+
+
+var app6 = new Vue({
+	el :"#app-6",
+	data:{
+		message: "Hello vue."
+	}
+
+});
+
+
+
+// 定义名为 todo-item 的组件
+Vue.component('todo-item',{
+	props: ['todos'],
+	template: '<li>{{todos.text}}</li>'
+})
+
+
+var app7 = new Vue({
+
+	el:'#app-7',
+	data:{
+		groceryList:[
+			{id:0, text:"蔬菜"},
+			{ id: 1, text: "水果" },
+			{ id: 2, text: "奶酪" },
+			{ id: 3, text: "随便" },
+		]
+	}
+
 })
