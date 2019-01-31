@@ -13,7 +13,7 @@ var app2= new Vue({
 	}
 });
 
-var app3 = new Vue({}
+var app3 = new Vue({
 	el:"#app-3",
 	data:{
 		seen:true
@@ -77,4 +77,40 @@ var app7 = new Vue({
 		]
 	}
 
+}),
+
+
+var xiaoming = {
+	age: '23'
+}
+Object.freeze(xiaoming)
+
+new Vue({
+	el:'#app-8',
+	data:xiaoming
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
