@@ -88,9 +88,33 @@ Object.freeze(xiaoming)
 var app8 = new Vue({
 	el:'#app-8',
 	data:xiaoming
+});
+
+
+
+
+var data = {age:1}
+var vm = new Vue({
+	el: '#example',
+	data:name
 })
 
+vm.$data === name // --> true
+vm.$el === document.getElementById('example')
 
+vm.$watch('age',function (newValue,oldValue) {
+	//这个回调将在 `vm.a` 改变后调用
+});
+
+new Vue({
+	data : {
+		a:1
+	},
+	created: function () {
+		console.log('a is: ' + this.a )
+
+	}
+})
 
 
 
