@@ -16,7 +16,7 @@ class Connect(object):
             b[i.split('=')[0]] = i.split('=')[1]
 
         try:
-            check_signature(token='18_PdgFBkp', signature=b['signature'], timestamp=b['timestamp'], nonce=b['nonce'])
+            check_signature(token='...', signature=b['signature'], timestamp=b['timestamp'], nonce=b['nonce'])
             resp.body = (b['echostr'])
         except InvalidSignatureException:
             pass
